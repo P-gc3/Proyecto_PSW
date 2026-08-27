@@ -1,0 +1,51 @@
+/* =========================================================
+   MOSAIC — Auth pages (sign in / sign up)
+   ========================================================= */
+
+.auth-shell{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+@media (max-width: 860px){
+  .auth-shell{ grid-template-columns: 1fr; }
+  .auth-visual{ display: none; }
+}
+
+.auth-visual{
+  background: linear-gradient(160deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  padding: var(--space-7);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.auth-visual .brand{ color: #fff; }
+.auth-visual .brand .brand-mark span{ background: rgba(255,255,255,.55); }
+.auth-visual .collage-grid{ opacity: .95; }
+.auth-visual blockquote{
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  margin: 0;
+  max-width: 420px;
+}
+
+.auth-form-side{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+.auth-box{ width: 100%; max-width: 380px; }
+.auth-box h1{ font-size: var(--fs-2xl); margin-bottom: var(--space-2); }
+.auth-box .sub{ margin-bottom: var(--space-6); }
+
+.divider{
+  display: flex; align-items: center; gap: var(--space-3);
+  color: var(--color-text-faint); font-size: var(--fs-xs);
+  margin: var(--space-5) 0;
+}
+.divider::before, .divider::after{ content: ""; flex: 1; height: 1px; background: var(--color-border); }
+
+.auth-switch{ text-align: center; margin-top: var(--space-5); font-size: var(--fs-sm); color: var(--color-text-muted); }
+.auth-switch a{ color: var(--color-secondary-dark); font-weight: 600; }

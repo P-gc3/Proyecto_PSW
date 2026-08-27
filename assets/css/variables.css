@@ -1,0 +1,69 @@
+/* =========================================================
+   MOSAIC — Design Tokens
+   Central place for every color, spacing, radius, shadow and
+   type value. Change the look of the whole site from here.
+   ========================================================= */
+
+:root{
+  /* ---- Brand palette: pale green + light blue ---- */
+  --color-bg:            #F2F9F5;   /* page background, pale mint */
+  --color-bg-alt:        #E7F2ED;   /* alternate section background */
+  --color-surface:       #FFFFFF;   /* cards, panels, modals */
+  --color-surface-tint:  #F6FBF9;   /* subtle tinted surface */
+
+  --color-primary:       #7FC49A;   /* pale green — primary actions */
+  --color-primary-dark:  #59A97C;   /* hover / active state */
+  --color-primary-light: #CDEBD9;   /* chips, badges, soft fills */
+
+  --color-secondary:     #9FD3E8;   /* light blue — links, accents */
+  --color-secondary-dark:#63AFCB;   /* hover / active state */
+  --color-secondary-light:#DCF0F7;  /* soft fills */
+
+  --color-text:          #223229;   /* primary text, deep green-grey */
+  --color-text-muted:    #5B6B62;   /* secondary text */
+  --color-text-faint:    #8B978F;   /* placeholders, timestamps */
+
+  --color-border:        #DCEBE2;   /* hairlines */
+  --color-border-strong: #C3DCCE;
+
+  --color-danger:        #E08585;
+  --color-warning:       #E5C57E;
+  --color-success:       #6FBE8F;
+
+  /* ---- Typography ---- */
+  --font-display: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+  --font-body:    'Inter', 'Segoe UI', system-ui, sans-serif;
+
+  --fs-xs:  0.75rem;
+  --fs-sm:  0.875rem;
+  --fs-md:  1rem;
+  --fs-lg:  1.125rem;
+  --fs-xl:  1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 2.75rem;
+
+  /* ---- Spacing scale ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* ---- Shape & elevation ---- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 3px rgba(34, 50, 41, 0.08);
+  --shadow-md: 0 4px 14px rgba(34, 50, 41, 0.10);
+  --shadow-lg: 0 12px 32px rgba(34, 50, 41, 0.14);
+
+  /* ---- Layout ---- */
+  --header-height: 64px;
+  --content-max: 1200px;
+  --transition: 160ms ease;
+}
