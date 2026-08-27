@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in · Mosaic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body data-page="signin">
+
+  <div class="auth-shell">
+    <section class="auth-visual">
+      <a href="signin.html" class="brand">
+        <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+        Animal Home
+      </a>
+      <div class="collage-grid" style="grid-auto-rows:70px;">
+        <div class="collage-tile span-2 tall" style="background:rgba(255,255,255,.25)"></div>
+        <div class="collage-tile span-1" style="background:rgba(255,255,255,.35)"></div>
+        <div class="collage-tile span-1" style="background:rgba(255,255,255,.2)"></div>
+        <div class="collage-tile span-2" style="background:rgba(255,255,255,.3)"></div>
+        <div class="collage-tile span-1 tall" style="background:rgba(255,255,255,.25)"></div>
+      </div>
+      <blockquote>"hola soy el eslogan"</blockquote>
+    </section>
+
+    <section class="auth-form-side">
+      <div class="auth-box">
+        <h1>Welcome back</h1>
+        <p class="sub">Sign in to see what your circles are sharing.</p>
+
+        <form id="signInForm" novalidate>
+          <div class="form-group">
+            <label for="signInEmail">Email</label>
+            <input type="email" id="signInEmail" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="signInPassword">Password</label>
+            <input type="password" id="signInPassword" name="password" autocomplete="current-password" required>
+            <p class="form-error" id="signInError"></p>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+        </form>
+
+        <div class="divider">or</div>
+        <button type="button" class="btn btn-outline btn-block" onclick="showToast('Google sign-in will be wired up with the backend.')">Continue with Google</button>
+
+        <p class="auth-switch">New to Mosaic? <a href="signup.html">Create an account</a></p>
+      </div>
+    </section>
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/auth.js" defer></script>
+</body>
+</html>

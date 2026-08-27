@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home · Mosaic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-page="home">
+
+  <div id="site-header"></div>
+
+  <main class="page-main">
+    <div class="container">
+
+      <section aria-labelledby="collageHeading" style="margin-bottom: var(--space-7);">
+        <div class="section-title">
+          <h2 id="collageHeading">Popular this week</h2>
+          <a class="see-all" href="feed.html?cat=Islands">Browse everything →</a>
+        </div>
+        <div class="collage-grid" id="collageGrid" aria-label="Collage of recent pictures"></div>
+      </section>
+
+      <section aria-labelledby="categoriesHeading" style="margin-bottom: var(--space-5);">
+        <h2 id="categoriesHeading" class="sr-only">Categories</h2>
+        <div class="category-bar" id="homeCategoryBar"></div>
+      </section>
+
+      <div id="categoryRails"></div>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
+</body>
+</html>

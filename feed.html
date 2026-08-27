@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feed · Mosaic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-page="feed">
+
+  <div id="site-header"></div>
+
+  <main class="page-main">
+      <a href="home.html" class="brand">
+          <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+          Animal Home
+      </a>
+      <div class="container">
+
+          <div class="grid-2">
+              <div>
+                  <div class="section-title">
+                      <div class="flex gap-3" style="align-items:center;">
+                          <a href="home.html" class="back-link inline" aria-label="Back to home"><svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#icon-arrow-left"></use></svg></a>
+                          <h2 id="feedTitle">Feed</h2>
+                      </div>
+                      <a class="btn btn-sm btn-primary" href="post-new.html">+ Share post</a>
+                  </div>
+
+                  <div class="category-bar" id="feedCategoryBar" aria-label="Switch category"></div>
+
+                  <div id="feedList"></div>
+
+                  <div class="flex-center" style="margin-top: var(--space-5);">
+                      <button class="btn btn-outline hidden" id="loadMoreBtn">Load more</button>
+                  </div>
+              </div>
+
+              <aside>
+                  <div class="card card-pad" style="margin-bottom: var(--space-4);">
+                      <h3>About this feed</h3>
+                      <p class="text-muted">One reusable template renders every category feed — the category comes from the page URL (<code>?cat=</code>), so this exact page serves Islands, Music, Villagers, and every future category without duplicating markup.</p>
+                  </div>
+                  <div class="card card-pad">
+                      <h3>Write a review</h3>
+                      <p class="text-muted">Rate and review something in this category.</p>
+                      <a class="btn btn-secondary btn-block" href="review-new.html">New review</a>
+                  </div>
+              </aside>
+          </div>
+
+      </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/feed.js" defer></script>
+</body>
+</html>

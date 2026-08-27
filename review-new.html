@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Write a review · Mosaic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-page="review">
+
+  <div id="site-header"></div>
+
+  <main class="page-main">
+      <a href="home.html" class="back-link"><svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#icon-arrow-left"></use></svg> Home</a>
+      <div class="container" style="max-width: 640px;">
+
+          <h1>Write a review</h1>
+          <p class="text-muted" style="margin-bottom: var(--space-6);">Rate something and share your thoughts with the category feed.</p>
+
+          <form id="reviewForm" class="card card-pad" novalidate>
+
+              <div class="form-group">
+                  <label for="reviewCategory">Category</label>
+                  <div class="select-with-icon">
+                      <span class="select-icon-preview" id="reviewCategoryIcon"></span>
+                      <select id="reviewCategory" required></select>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <label for="reviewTitle">What are you reviewing?</label>
+                  <input type="text" id="reviewTitle" placeholder="e.g. Paddington 2" required>
+              </div>
+
+              <div class="form-group">
+                  <label>Your rating</label>
+                  <div class="star-rating" id="starInput"></div>
+              </div>
+
+              <div class="form-group">
+                  <label for="reviewBody">Your review</label>
+                  <textarea id="reviewBody" placeholder="What stood out to you?" required></textarea>
+                  <p class="form-error" id="reviewError"></p>
+              </div>
+
+              <div class="flex gap-3">
+                  <button type="submit" class="btn btn-primary">Publish review</button>
+                  <a class="btn btn-ghost" href="profile.html">Cancel</a>
+              </div>
+          </form>
+
+      </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/review.js" defer></script>
+</body>
+</html>

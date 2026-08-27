@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile · Mosaic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-page="profile">
+
+  <div id="site-header"></div>
+
+  <main class="page-main">
+      <a href="home.html" class="back-link"><svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#icon-arrow-left"></use></svg> Home</a>
+      <div class="container">
+
+          <section class="card card-pad flex gap-4" style="align-items:center; margin-bottom: var(--space-6); flex-wrap:wrap;">
+              <img class="avatar lg" id="profileAvatar" src="" alt="Your avatar">
+              <div style="flex:1; min-width:220px;">
+                  <h1 id="profileName" style="margin-bottom:2px;"></h1>
+                  <p class="text-faint" id="profileUsername" style="margin-bottom:8px;"></p>
+                  <p id="profileBio"></p>
+                  <div class="stat-block">
+                      <div><strong id="statFollowers">0</strong><span>Followers</span></div>
+                      <div><strong id="statFollowing">0</strong><span>Following</span></div>
+                  </div>
+              </div>
+              <div class="flex gap-2">
+                  <a class="btn btn-outline" href="#" onclick="showToast('Editing profile will be wired up with the backend.'); return false;">Edit profile</a>
+                  <a class="btn btn-primary" href="post-new.html">Share post</a>
+              </div>
+          </section>
+
+          <div class="tabs">
+              <button class="tab-btn active" data-tab="tabPosts">Posts</button>
+              <button class="tab-btn" data-tab="tabReviews">Reviews</button>
+          </div>
+
+          <div class="tab-panel active" id="tabPosts">
+              <div id="profilePosts"></div>
+          </div>
+
+          <div class="tab-panel" id="tabReviews">
+              <div id="profileReviews"></div>
+          </div>
+
+      </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/profile.js" defer></script>
+</body>
+</html>

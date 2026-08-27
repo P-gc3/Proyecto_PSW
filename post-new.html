@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share a post · Mosaic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-page="post">
+
+  <div id="site-header"></div>
+
+  <main class="page-main">
+      <a href="home.html" class="back-link"><svg class="icon" aria-hidden="true"><use href="assets/icons/icons.svg#icon-arrow-left"></use></svg> Home</a>
+      <div class="container" style="max-width: 640px;">
+
+          <h1>Share a post</h1>
+          <p class="text-muted" style="margin-bottom: var(--space-6);">Post a picture, video, or update to a category feed.</p>
+
+          <form id="postForm" class="card card-pad" novalidate>
+
+              <div class="form-group">
+                  <label for="postCategory">Category</label>
+                  <div class="select-with-icon">
+                      <span class="select-icon-preview" id="postCategoryIcon"></span>
+                      <select id="postCategory" required></select>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <label>Photo or video</label>
+                  <div class="media-picker" id="mediaPicker">
+                      <p id="mediaPickerLabel" style="margin:0;">Click to choose a photo or video</p>
+                      <p class="hint" style="margin:4px 0 0;">Stored as a placeholder for now — file upload connects to the backend later.</p>
+                  </div>
+                  <input type="file" id="mediaInput" accept="image/*,video/*" class="hidden" multiple>
+              </div>
+
+              <div class="form-group">
+                  <label for="postCaption">Caption</label>
+                  <textarea id="postCaption" placeholder="Say something about it…" required></textarea>
+                  <p class="form-error" id="postError"></p>
+              </div>
+
+              <div class="flex gap-3">
+                  <button type="submit" class="btn btn-primary">Share post</button>
+                  <a class="btn btn-ghost" href="home.html">Cancel</a>
+              </div>
+          </form>
+
+      </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/mock-data.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/post.js" defer></script>
+</body>
+</html>
